@@ -1,8 +1,8 @@
-from pathlib import Path
-
 import pychoco as pc
 import visuals as vis
+
 from tqdm import tqdm
+from pathlib import Path
 
 def get_puzzle_size(puzzle):
     """Calculates the size n of the n x n puzzle."""
@@ -179,9 +179,9 @@ if __name__ == "__main__":
         start_time = time.time()
 
     # 1) Single Puzzle Execution
-    PUZZLE_NUMBER = 170 # from 170 to 534
+    PUZZLE_NUMBER = 1
     PUZZLE_PATH = INPUT_DIR / f"{PUZZLE_NUMBER}.txt"
-    #single_puzzle_solve(PUZZLE_PATH, output_image_path=OUTPUT_DIR / f"{PUZZLE_NUMBER}.png", output_text_path=OUTPUT_DIR / f"{PUZZLE_NUMBER}.txt", save=save, verbose=True)
+    single_puzzle_solve(PUZZLE_PATH, output_image_path=OUTPUT_DIR / f"{PUZZLE_NUMBER}.png", output_text_path=OUTPUT_DIR / f"{PUZZLE_NUMBER}.txt", save=save, verbose=True)
 
     # 2) All Puzzle Execution
     SIZE_N = 4
